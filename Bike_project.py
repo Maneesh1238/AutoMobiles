@@ -76,7 +76,7 @@ def update_bike(name):
                 (new_name, new_cc, new_mileage, name)
             )
             conn.commit()
-            print("✅ Bike updated successfully!")
+            print(" Bike updated successfully!")
 
     except mysql.connector.Error as err:
     print(f"Error:{err}")
@@ -88,7 +88,7 @@ def delete_bike(name):
         if cursor.rowcount == 0:
             print("⚠ No bike found with that name.")
         else:
-            print("✅ Bike deleted successfully!")
+            print(" Bike deleted successfully!")
     except mysql.connector.Error as err:
         print(f"Error: {err}")
 
@@ -108,7 +108,7 @@ def get_bike_input():
         if mileage.replace('.', '', 1).isdigit():
             mileage = float(mileage)
             break
-        print("⚠ Mileage must be a number.")
+        print(" Mileage must be a number.")
     return name, cc, mileage
 
 # --- Main Menu ---
@@ -137,7 +137,7 @@ def main_menu():
             print("Exiting program...")
             break
         else:
-            print("⚠ Invalid option. Try again.")
+            print(" Invalid option. Try again.")
 
 # --- Run Program ---
 try:
