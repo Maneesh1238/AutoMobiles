@@ -5,7 +5,7 @@ try:
         host = "localhost",
         user = "root",
         password = "Maneesh@B161238",
-        database = "motorcycles"
+        database = "bikes_db"
     )
     cursor = conn.cursor()
     print("connected to mysql database successfully")
